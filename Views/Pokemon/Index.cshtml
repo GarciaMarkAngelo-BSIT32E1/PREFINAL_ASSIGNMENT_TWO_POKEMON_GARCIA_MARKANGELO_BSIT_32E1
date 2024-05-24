@@ -1,0 +1,12 @@
+﻿@model List<PokemonCatcher.Models.PokemonListItem>
+
+<h1>Pokemon List</h1>
+
+<ul>
+    @foreach (var pokemon in Model)
+    {
+        <li>
+            <a asp-controller="Pokemon" asp-action="Details" asp-route-name="@pokemon.Name">@pokemon.Name</a>
+        </li>
+    }
+</ul>
